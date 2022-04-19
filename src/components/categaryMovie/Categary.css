@@ -1,0 +1,10 @@
+.categary_container{
+    width: 100%;
+    height: 100%;
+    height: 35rem;
+}
+.categary_container > img{
+    background-position: contain;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,60 @@
+.movie_list-container{
+    width: 100%;
+}
+.form-filter{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding:0 1rem;
+    font-size: 1.5rem;
+}
+.order{
+    height: 55%;
+    width: 15%;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+.kind{
+    height: 55%;
+    width: 15%;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+.categary{
+    height: 55%;
+    width: 15%;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+.country{
+    height: 55%;
+    width: 20%;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+.year{
+    height: 55%;
+    width: 15%;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+.form_filter-button{
+    height: 55%;
+    width: 15%;
+    border-radius: 0.5rem;
+    background-color: #5CB85C;
+    color:white;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.form_filter-button:hover{
+    background-color: green;
+}
+.card_container{
+    width:  100%;
+    display: flex;
+    flex-wrap: wrap;
+}

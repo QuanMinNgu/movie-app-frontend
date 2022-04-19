@@ -1,0 +1,21 @@
+.movie_announce-infor{
+    width: 100%;
+    background-color: #282828;
+    margin-top: 1rem;
+    padding:1.5rem;
+}
+.infor_movie{
+    width: 100%;
+    font-size: 1.4rem;
+    color:white;
+    text-align: justify;
+}
+.image_movie-infor{
+    width: 100%;
+    height: 40rem;
+    margin-top: 1rem;
+}
+.image_movie-infor > img{
+    width: 100%;
+    height: 100%;
+}

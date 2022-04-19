@@ -1,0 +1,13 @@
+.comment_navbar{
+    width: 100%;
+    margin-top: 2rem;
+    height: 4rem;
+    background-color: #282828;
+    border-top: 0.1rem solid #EFC72A;
+    display: flex;
+    padding:0 1rem;
+    align-items: center;
+    font-size: 1.5rem;
+    color:white;
+    font-weight: 700;
+}

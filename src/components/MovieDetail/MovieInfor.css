@@ -1,0 +1,200 @@
+.movie_infor{
+    width: 100%;
+    background-color: #282828;
+    padding:1.5rem;
+}
+.movie_infor-img{
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    border:0.2rem solid #EFC72A;
+    position: relative;
+}
+.movie_infor-img > img{
+    width: 100%;
+    height: 100%;
+}
+.button_watch{
+    position: absolute;
+    bottom:0.5rem;
+    right:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+}
+.button_watch > button{
+    border:none;
+}
+.button_watch > button:last-child{
+    margin-left: 0.5rem;
+}
+.trailer{
+    width: 8rem;
+    height:3.8rem;
+    border-radius: 0.4rem;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color:#E5FFFF;
+    background-color: #5CB85C;
+    font-weight: 600;
+}
+.trailer:hover{
+    background-color: green;
+}
+.watch{
+    width: 10rem;
+    height:3.8rem;
+    border-radius: 0.4rem;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color:#E5FFFF;
+    background-color: #D9534F;
+    font-weight: 600;
+}
+.watch:hover{
+    background-color: red;
+}
+.movie_infor-detail{
+    width: 100%;
+}
+.name_movie-infor{
+    font-size: 2rem;
+    color:#EBBE28;
+    font-weight: 700;
+    word-spacing: 0.01rem;
+}
+.status_movie-infor{
+    font-size: 1.5rem;
+    color:white;
+    margin:1rem 0;
+    font-weight: 700;
+}
+.status_movie-name-infor{
+    width: 100%;
+    font-size: 1.2rem;
+    color:white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin:1rem 0;
+}
+.status_movie-name-infor > span{
+    display: flex;
+}
+.status_movie-name-infor > span > p{
+    margin:0;
+    margin-left: 0.2rem;
+    color:#EBC328;
+    font-weight: 700;
+}
+.director_movie-infor{
+    width: 100%;
+    font-size: 1.2rem;
+    color:white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin:1rem 0;
+}
+.director_movie-infor > span{
+    display: flex;
+}
+.director_movie-infor > span > p{
+    margin:0;
+    margin-left: 0.2rem;
+    color:#3F7FC7;
+    font-weight: 700;
+}
+.actor_movie-infor{
+    width: 100%;
+    font-size: 1.2rem;
+    color:white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin:1rem 0;
+}
+.actor_movie-infor > span{
+    display: flex;
+}
+.actor_movie-infor > span > p{
+    margin:0;
+    margin-left: 0.2rem;
+    color:#3F7FC7;
+    font-weight: 700;
+}
+.time_movie-infor{
+    width: 100%;
+    font-size: 1.2rem;
+    color:white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin:1rem 0;
+}
+.time_movie-infor > span{
+    display: flex;
+}
+.time_movie-infor > span > p{
+    margin:0;
+    margin-left: 0.4rem;
+    color:#3F7FC7;
+    font-weight: 700;
+}
+.eyes_movie-infor{
+    width: 100%;
+    font-size: 1.2rem;
+    color:white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-top:3rem;
+}
+.eyes_movie-infor > span{
+    display: flex;
+}
+.eyes_movie-infor > span > p{
+    margin:0;
+    margin-left: 0.4rem;
+    color:white;
+    font-weight: 700;
+}
+.like_movie-infor{
+    margin: 1rem 0;
+    display: flex;
+}
+.like_movie-infor > button:active{
+    transform: scale(1.1);
+}
+.like{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color:#ffff;
+    background-color: #1877F2;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    border-radius: 0.5rem;
+}
+.share{
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    color:#ffff;
+    background-color: #1877F2;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    border-radius: 0.5rem;
+}
+.review_movie-infor{
+    display: flex;
+    margin-top:1.5rem;
+    font-size: 2.5rem;
+    color:rgb(255,173,82);
+}

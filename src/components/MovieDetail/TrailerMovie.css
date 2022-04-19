@@ -1,0 +1,13 @@
+.trailer_container{
+    width: 100%;
+    margin-top: 2rem;
+    height: 4rem;
+    background-color: #282828;
+    border-top: 0.1rem solid white;
+    display: flex;
+    align-items: center;
+    padding:0 1rem;
+    font-size: 1.5rem;
+    color:#EBC328;
+    font-weight: 700;
+}

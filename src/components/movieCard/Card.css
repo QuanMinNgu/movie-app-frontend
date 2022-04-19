@@ -1,0 +1,119 @@
+.date_movie{
+    position: absolute;
+    top:0.5rem;
+    left:0.5rem;
+    height: 2rem;
+    background-color: #892624;
+    border-radius: 0.2rem;
+}
+.date_movie > span{
+    height: 100%;
+    padding:0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size: 1.2rem;
+}
+.Link{
+    text-decoration: none;
+}
+.w_100{
+    width: 100%;
+}
+.card_containter{
+    position: relative;
+}
+.edit_container{
+    position: absolute;
+    top:0rem;
+    bottom:1rem;
+    left:1.2rem;
+    right:1.2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.edit_container > button{
+    width: 45%;
+    height: 13%;
+    border-radius: 2rem;
+    transform: all ease 0.2s;
+}
+.delete_btn{
+    background-color: red;
+    color:white;
+    outline: none;
+    border:none;
+    cursor: pointer;
+}
+.edit_btn{
+    background-color: green;
+    color:white;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+.edit_container > button:hover{
+    transform: scale(1.1);
+}
+.card_containter:hover .edit_container{
+    display: flex;
+}
+.delete_confir{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.05);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.confir_form{
+    width: 30%;
+    background-color:white;
+    border-radius: 2rem;
+    padding:2rem;
+}
+.confir_form > h1{
+    width: 100%;
+    text-align: center;
+    margin:0;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.button_confir{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.button_confir > button{
+    width: 30%;
+    height: 3rem;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    border-radius: 1rem;
+}
+.cancel_btn-confir{
+    margin-right: 1rem;
+    background-color: green;
+    color:white;
+    font-size: 1.4rem;
+}
+.delete_btn-confir{
+    font-size: 1.4rem;
+    background-color: red;
+    color: white;
+}
+.button_confir > button:active{
+    transform: scale(1.05);
+}

@@ -1,0 +1,38 @@
+.pagination_container{
+    width: 100%;
+    margin:2rem 0;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 1rem;
+}
+.pagination_page{
+    width: 2.7rem;
+    height: 2.7rem;
+    background-color: #E9E9E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2rem;
+    margin-right:1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.pagination_page.active{
+    background-color: #5D5D5D;
+    color:white;
+    border-bottom: 0.1rem solid white;
+}
+.dot{
+    width: 0.7rem;
+    height: 2.7rem;
+    color:white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 0.2rem;
+    margin-right:1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
