@@ -8,27 +8,28 @@ import { isFailing, isLoading, isSuccess } from '../components/redux/slice/AuthS
 import { toast } from 'react-toastify';
 import { useLocation, useParams } from 'react-router-dom';
 import MoviePagination from './MoviePagination';
+import FormFilter from './FormFilter';
 const MovieListDetail = ({cache}) => {
 
   const [movie,setMovie] = useState([]);
   const {search} = useLocation();
-  const page = new URLSearchParams(search).get('page');
   const [total,setTotal] = useState(0);
   const dispatch = useDispatch();
   const {list} = useParams();
-
   useEffect(() => {
     let here = true;
     let url;
     if(list === 'new-movie'){
-      url = `/api/movie?limit=20&page=${page}`;
+      url = `/api/movie${search ? search + "&" : "?"}limit=20`;
     }
     else{
-      url = `/api/movie?limit=20&kind=${list}&page=${page}`
+      url = `/api/movie${search ? search + "&" : "?"}limit=20&kind=${list}`
     }
+    console.log(url)
     if(cache.current[url]){
       setMovie(cache.current[url]);
-      return setTotal(cache.current[url + "page"]);
+      setTotal(cache.current[url + "page"]);
+      return;
     }
     dispatch(isLoading());
     axios.get(url)
@@ -46,40 +47,11 @@ const MovieListDetail = ({cache}) => {
     return () => {
       here = false;
     }
-  },[search]);
+  },[list,search]);
   return (
     <div className='movie_list-container'>
         <MovieListNavBar />
-        <div className='form-filter'>
-            <select className='order'>
-              <option>-- Sắp Xếp --</option>
-              <option>Mới Cập Nhật</option>
-              <option>Cũ Nhất</option>
-              <option>Năm Sản Xuất</option>
-            </select>
-            <select className='kind'>
-              <option>-- Loại --</option>
-              <option>Phim Lẻ</option>
-              <option>Phim Bộ</option>
-            </select>
-            <select className='categary'>
-              <option>--Thể Loại--</option>
-              <option>Phim Lẻ</option>
-              <option>Phim Bộ</option>
-            </select>
-            <select className='country'>
-              <option>--Quốc Gia --</option>
-              <option>Hoa Kỳ</option>
-              <option>Việt Nam</option>
-            </select>
-            <select className='year'>
-              <option>--Năm --</option>
-              <option>2022</option>
-              <option>2021</option>
-              <option>2020</option>
-            </select>
-            <button className='form_filter-button'>Lọc Phim</button>
-        </div>
+        <FormFilter />
         <div className='card_container'>
           {movie.map(item => (
             <Card key={item?.slug + "List"} item={item}/>

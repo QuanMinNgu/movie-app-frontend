@@ -13,7 +13,7 @@ const Content = ({item}) => {
           <p className='e_name'>{item?.englishtitle}</p>
           <p className='watch_content'>
               <FontAwesomeIcon style={{marginRight:"0.4rem"}} icon={faEye} />
-              961 lượt xem
+              {item?.watching} lượt xem
           </p>
           <p className='star_content'>
               <FontAwesomeIcon class="star_c" icon={faStar} />

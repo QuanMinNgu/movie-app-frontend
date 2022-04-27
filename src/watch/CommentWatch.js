@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { toast } from 'react-toastify';
-import './Comment.css';
-import CommentUser from '../../comments/CommentUser';
 import {useParams} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
-import {isFailing, isLoading, isSuccess} from '../redux/slice/AuthSlice';
+import {isFailing, isLoading, isSuccess} from '../components/redux/slice/AuthSlice';
 import axios from 'axios';
-const Comment = ({socket}) => {
+import CommentDetail from './CommentDetail';
+const CommentWatch = ({socket}) => {
 
   const nameRef = useRef();
   const contentRef = useRef("");
@@ -48,10 +47,11 @@ const Comment = ({socket}) => {
     if(!nameRef.current.value || !contentRef.current.value){
       return toast.error("Vui lòng điện hết vào ô trống.");
     }
+    const content = contentRef.current.value;
+    contentRef.current.value= "";
     if(socket){
-      socket.emit("createComment",{name:nameRef.current.value,content:contentRef.current.value,room:slug});
+      socket.emit("createComment",{name:nameRef.current.value,content:content,room:slug});
     }
-    contentRef.current.value = "";
   }
   return (
     <div className='comment_from'>
@@ -71,11 +71,11 @@ const Comment = ({socket}) => {
       </div>
       <div className='comment_aready'>
         {comment?.map(item => (
-          <CommentUser item={item} key={item._id}/>
+          <CommentDetail key={item._id + "A"} item={item}/>
         ))}
       </div>
     </div>
   )
 }
 
-export default Comment
+export default CommentWatch

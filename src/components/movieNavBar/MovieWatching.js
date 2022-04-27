@@ -15,7 +15,7 @@ const MovieWatching = ({cache}) => {
 
   useEffect(() => {
     let here = true;
-    const url = "/api/movie";
+    const url = "/api/movie?sort=-watching";
     if(cache.current[url]){
       return setMovie(cache.current[url]);
     }

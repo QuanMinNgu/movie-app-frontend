@@ -8,11 +8,12 @@ import Trailer from './Trailer';
 import TrailerMovie from './TrailerMovie';
 import Comment from './Comment';
 import axios from 'axios';
-import {useParams} from 'react-router-dom';
-const MovieCardDetail = ({cache}) => {
+import { useParams} from 'react-router-dom';
+const MovieCardDetail = ({cache,socket}) => {
 
   const [movie,setMovie] = useState();
   const {slug} = useParams();
+
   useEffect(() => {
     let here = true;
     const url = `/api/movie/${slug}`;
@@ -30,7 +31,7 @@ const MovieCardDetail = ({cache}) => {
     return () => {
         here = false;
     }
-  },[]);
+  },[slug]);
   return (
     <div className='movie_card-container'>
         <MovieInfor movie={movie}/>
@@ -39,7 +40,7 @@ const MovieCardDetail = ({cache}) => {
         <TrailerMovie movie={movie}/>
         <Trailer movie={movie}/>
         <CommentNavBar />
-        <Comment />
+        <Comment socket={socket}/>
     </div>
   )
 }

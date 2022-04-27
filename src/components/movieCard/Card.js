@@ -51,6 +51,9 @@ const Card = ({item}) => {
   const handleEdit = () => {
     navigate(`/edit/${item?.slug}`);
   }
+  const handleWatch = () => {
+    navigate(`/${item?.slug}`);
+  }
   return (
     <div className='col c-6 m-4 l-3 card_containter'>
       <a className='Link' href={`/${item?.slug || "asdasd"}`}>
@@ -68,6 +71,7 @@ const Card = ({item}) => {
       {auth.user && 
       <div className='edit_container'>
         <button onClick={() => setDelteConfir(true)} className='delete_btn'>Xóa</button>
+        <button onClick={handleWatch}>Xem</button>
         <button onClick={handleEdit} className='edit_btn'>Sửa</button>
       </div>}
       {deleteConfir && (<div className='delete_confir'>

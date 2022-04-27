@@ -8,7 +8,7 @@ import Footer from './components/footer/Footer';
 import Login from './components/auth/Login';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import decode_jwt from 'jwt-decode';
 import Loading from './components/utils/Loading';
@@ -33,6 +33,7 @@ function App() {
       }
     }
   },[]);
+
   return (
     <Router>
       <div className="App">
